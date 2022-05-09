@@ -1,26 +1,31 @@
 import { Dimensions } from 'react-native';
 
-const { width: device_width, height: device_height } = Dimensions.get('window');
+const { width: DEVICE_WIDTH, height: DEVICE_HEIGHT } = Dimensions.get('window');
 
 export const Theme = {
-  dimensions: {
-    device_width,
-    device_height,
+  DIMENSIONS: {
+    DEVICE_WIDTH,
+    DEVICE_HEIGHT,
   },
-  colors: {
-    primary: '#27B559',
-    secondary: '#4887CD',
-    gray_01: '#FEFFFF',
-    gray_02: '#B2B2B2',
-    gray_gradient: ['#606362', '#353E3D', '#2B2D2C'],
+  COLORS: {
+    PRIMARY: '#27B559',
+    PRIMARY_DARK: '#2B2D2C',
+    SECONDARY: '#4887CD',
+    GRAY_01: '#FEFFFF',
+    GRAY_02: '#B2B2B2',
+    GRAY_GRADIENT: ['#606362', '#353E3D', '#2B2D2C'],
+    PRIMARY_GRADIENT: ['#3C5657', '#121212'],
   },
-  spacing: {
+  SPACING: {
     x1: 8,
     x2: 16,
     x3: 24,
   },
-  fonts: {
-    Inter_600SemiBold: 'Inter_600SemiBold',
-    Inter_700Bold: 'Inter_700Bold',
+  FONTS: {
+    TEXT: 'Inter_600SemiBold',
+    TITLE: 'Inter_700Bold',
+  },
+  TOUCHABLES: {
+    ACTIVE_OPACITY: 0.77,
   },
 };
