@@ -5,6 +5,7 @@ import {
   Inter_600SemiBold,
   Inter_700Bold,
 } from '@expo-google-fonts/inter';
+import { StatusBar } from 'expo-status-bar';
 
 import { Routes } from './src/navigation/Routes';
 
@@ -26,5 +27,10 @@ export default function App() {
     return null;
   }
 
-  return <Routes />;
+  return (
+    <>
+      <StatusBar style="light" backgroundColor="transparent" translucent />
+      <Routes />
+    </>
+  );
 }
