@@ -1,20 +1,22 @@
 import React from 'react';
-import { FlatList, ListRenderItemInfo, View } from 'react-native';
+import { FlatList, ListRenderItemInfo } from 'react-native';
 
 import {
   PlaylistButton,
   PlaylistButtonProps,
 } from '@components/PlaylistButton';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Theme } from '@config/theme';
 
 import { ITEMS } from './raw';
-
 import { styles } from './styles';
+import { Title } from '@components/Title';
 
 export function HomeScreen() {
   function renderPlaylistButton({
     item,
   }: ListRenderItemInfo<PlaylistButtonProps>) {
-    return <PlaylistButton {...item} />;
+    return <PlaylistButton {...item} style={styles.playlistButton} />;
   }
 
   function handleKeyExtractor(item: PlaylistButtonProps, index: number) {
@@ -22,14 +24,20 @@ export function HomeScreen() {
   }
 
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      style={styles.container}
+      colors={Theme.COLORS.PRIMARY_GRADIENT}
+      start={{ x: 0.2, y: 0 }}
+      end={{ x: 0.3, y: 0.16 }}>
+      <Title>Boa tarde</Title>
       <FlatList<PlaylistButtonProps>
         data={ITEMS}
         renderItem={renderPlaylistButton}
         keyExtractor={handleKeyExtractor}
         numColumns={2}
-        columnWrapperStyle={{ justifyContent: 'space-between' }}
+        columnWrapperStyle={styles.columnWrapper}
+        contentContainerStyle={styles.contentContainer}
       />
-    </View>
+    </LinearGradient>
   );
 }

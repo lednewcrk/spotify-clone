@@ -4,19 +4,28 @@ import { Theme } from '@config/theme';
 
 export const styles = StyleSheet.create({
   container: {
+    flex: 1,
     flexDirection: 'row',
+    borderRadius: 8,
+    overflow: 'hidden',
+    backgroundColor: 'transparent',
+  },
+  background: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: Theme.COLORS.PRIMARY_DARK,
+    opacity: 0.7,
   },
   image: {
-    width: Theme.dimensions.device_width * 0.15,
-    height: Theme.dimensions.device_width * 0.15,
+    width: 52,
+    height: 52,
   },
   content: {
-    paddingHorizontal: Theme.spacing.x1,
+    paddingHorizontal: Theme.SPACING.x1,
     justifyContent: 'center',
   },
   name: {
-    fontFamily: Theme.fonts.Inter_700Bold,
+    fontFamily: Theme.FONTS.TITLE,
     fontSize: 12,
-    color: Theme.colors.gray_01,
+    color: Theme.COLORS.GRAY_01,
   },
 });
