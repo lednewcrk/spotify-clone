@@ -1,6 +1,12 @@
 import { StyleSheet } from 'react-native';
 
 import { Theme } from '@config/theme';
+import { LOTTIES } from '@assets/lottie';
+
+export const LOTTIE_COLOR_FILTERS = LOTTIES.WAVES.layers.map((it: any) => ({
+  keypath: it.nm,
+  color: Theme.COLORS.PRIMARY,
+}));
 
 export const styles = StyleSheet.create({
   container: {
@@ -20,12 +26,27 @@ export const styles = StyleSheet.create({
     height: 52,
   },
   content: {
-    paddingHorizontal: Theme.SPACING.x1,
+    flex: 1,
     justifyContent: 'center',
+    paddingHorizontal: Theme.SPACING.x1,
+  },
+  playlistNameContainer: {
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   name: {
+    flex: 1,
     fontFamily: Theme.FONTS.TITLE,
     fontSize: 12,
     color: Theme.COLORS.GRAY_01,
+    paddingRight: Theme.SPACING.x1,
+  },
+  waves: {
+    width: 12,
+    height: 12,
+  },
+  progressBar: {
+    marginTop: Theme.SPACING.x1,
   },
 });

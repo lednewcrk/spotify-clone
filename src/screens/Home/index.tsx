@@ -1,15 +1,15 @@
 import React from 'react';
 import { FlatList, ListRenderItemInfo } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
+import { ITEMS } from './raw';
+import { styles } from './styles';
 
 import {
   PlaylistButton,
   PlaylistButtonProps,
 } from '@components/PlaylistButton';
-import { LinearGradient } from 'expo-linear-gradient';
 import { Theme } from '@config/theme';
-
-import { ITEMS } from './raw';
-import { styles } from './styles';
 import { Title } from '@components/Title';
 
 export function HomeScreen() {

@@ -13,6 +13,7 @@ export const Theme = {
     SECONDARY: '#4887CD',
     GRAY_01: '#FEFFFF',
     GRAY_02: '#B2B2B2',
+    GRAY_03: '#8E9090',
     GRAY_GRADIENT: ['#606362', '#353E3D', '#2B2D2C'],
     PRIMARY_GRADIENT: ['#3C5657', '#121212'],
   },
