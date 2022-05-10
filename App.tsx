@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { LogBox } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import {
   useFonts,
@@ -8,6 +9,11 @@ import {
 import { StatusBar } from 'expo-status-bar';
 
 import { Routes } from './src/navigation/Routes';
+
+LogBox.ignoreLogs([
+  'ViewPropTypes will be removed',
+  'ColorPropType will be removed',
+]);
 
 export default function App() {
   const [fontsLoaded] = useFonts({
