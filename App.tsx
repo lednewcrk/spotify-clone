@@ -7,6 +7,7 @@ import {
   Inter_700Bold,
 } from '@expo-google-fonts/inter';
 import { StatusBar } from 'expo-status-bar';
+import { RootSiblingParent } from 'react-native-root-siblings';
 
 import { Routes } from './src/navigation/Routes';
 
@@ -34,9 +35,9 @@ export default function App() {
   }
 
   return (
-    <>
+    <RootSiblingParent>
       <StatusBar style="light" backgroundColor="transparent" translucent />
       <Routes />
-    </>
+    </RootSiblingParent>
   );
 }
