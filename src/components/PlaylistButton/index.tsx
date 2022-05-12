@@ -17,13 +17,13 @@ import { Theme } from '@config/theme';
 import { LOTTIES } from '@assets/lotties';
 import { Dot } from '@components/Dot';
 
-export interface PlaylistButtonProps extends TouchableOpacityProps {
+export type PlaylistButtonProps = TouchableOpacityProps & {
   image: ImageProps['source'];
   name: string;
   isPlaying?: boolean;
   hasNewContent?: boolean;
   progressInPercent?: number;
-}
+};
 
 export function PlaylistButton({
   image,

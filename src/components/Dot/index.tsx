@@ -4,10 +4,10 @@ import { View, ViewStyle } from 'react-native';
 
 import { styles } from './styles';
 
-export interface DotProps {
+export type DotProps = {
   color?: string;
   size?: number;
-}
+};
 
 export function Dot({ color = Theme.COLORS.SECONDARY, size = 10 }: DotProps) {
   const style: ViewStyle = {
