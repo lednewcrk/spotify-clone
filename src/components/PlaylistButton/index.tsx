@@ -1,4 +1,3 @@
-import { Theme } from '@config/theme';
 import React, { useState } from 'react';
 import {
   Image,
@@ -13,7 +12,9 @@ import LottieView from 'lottie-react-native';
 import { Bar as ProgressBar } from 'react-native-progress';
 
 import { LOTTIE_COLOR_FILTERS, styles } from './styles';
-import { LOTTIES } from '@assets/lottie';
+
+import { Theme } from '@config/theme';
+import { LOTTIES } from '@assets/lotties';
 import { Dot } from '@components/Dot';
 
 export interface PlaylistButtonProps extends TouchableOpacityProps {

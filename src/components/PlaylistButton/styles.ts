@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 import { Theme } from '@config/theme';
-import { LOTTIES } from '@assets/lottie';
+import { LOTTIES } from '@assets/lotties';
 
 export const LOTTIE_COLOR_FILTERS = LOTTIES.WAVES.layers.map((it: any) => ({
   keypath: it.nm,
