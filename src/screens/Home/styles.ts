@@ -14,6 +14,9 @@ export const styles = StyleSheet.create({
     paddingLeft: Theme.SPACING.x2,
     paddingRight: Theme.SPACING.x3,
   },
+  playlistButtonListWrapper: {
+    marginBottom: Theme.SPACING.x4,
+  },
   playlistButton: {
     flex: 0,
     width: PLAYLIST_BUTTON_WIDTH,

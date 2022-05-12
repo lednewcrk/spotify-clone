@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
-import { FlatList, ListRenderItemInfo } from 'react-native';
+import { FlatList, ListRenderItemInfo, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Toast from 'react-native-root-toast';
 
-import { ITEMS } from './raw';
+import { PLAYLIST_BUTTONS_ITEMS, FEATURED_ITEM } from './raw';
 import { styles } from './styles';
 
 import {
@@ -12,6 +12,7 @@ import {
 } from '@components/PlaylistButton';
 import { Theme } from '@config/theme';
 import { Header, HeaderProps } from '@components/Header';
+import { FeaturedButton } from '@components/FeaturedButton';
 
 let toast: any;
 function featureNotImplementedToast() {
@@ -28,10 +29,6 @@ export function HomeScreen() {
     [],
   );
 
-  function handlePlaylistButtonPress() {
-    featureNotImplementedToast();
-  }
-
   function renderPlaylistButton({
     item,
   }: ListRenderItemInfo<PlaylistButtonProps>) {
@@ -39,7 +36,7 @@ export function HomeScreen() {
       <PlaylistButton
         {...item}
         style={styles.playlistButton}
-        onPress={handlePlaylistButtonPress}
+        onPress={featureNotImplementedToast}
       />
     );
   }
@@ -55,13 +52,20 @@ export function HomeScreen() {
       start={{ x: 0.2, y: 0 }}
       end={{ x: 0.3, y: 0.16 }}>
       <Header title="Boa tarde" rightIcons={headerRightIcons} />
-      <FlatList<PlaylistButtonProps>
-        data={ITEMS}
-        renderItem={renderPlaylistButton}
-        keyExtractor={handleKeyExtractor}
-        numColumns={2}
-        columnWrapperStyle={styles.columnWrapper}
-        contentContainerStyle={styles.contentContainer}
+      <View style={styles.playlistButtonListWrapper}>
+        <FlatList<PlaylistButtonProps>
+          data={PLAYLIST_BUTTONS_ITEMS}
+          contentContainerStyle={styles.contentContainer}
+          columnWrapperStyle={styles.columnWrapper}
+          renderItem={renderPlaylistButton}
+          keyExtractor={handleKeyExtractor}
+          numColumns={2}
+        />
+      </View>
+      <FeaturedButton
+        title={FEATURED_ITEM.title}
+        image={FEATURED_ITEM.image}
+        onPress={featureNotImplementedToast}
       />
     </LinearGradient>
   );

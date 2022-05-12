@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    borderRadius: 8,
+    borderRadius: 4,
     overflow: 'hidden',
     backgroundColor: 'transparent',
   },
