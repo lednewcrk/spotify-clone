@@ -1,6 +1,4 @@
-import { PlaylistButtonProps } from '../../components/PlaylistButton';
-
-export const ITEMS: Array<PlaylistButtonProps> = [
+export const PLAYLIST_BUTTONS_ITEMS = [
   {
     name: 'HUMMMMMMM',
     image: {
@@ -41,3 +39,9 @@ export const ITEMS: Array<PlaylistButtonProps> = [
     },
   },
 ];
+
+export const FEATURED_ITEM = {
+  title: 'Where you are’ de PinkPantheress (ft. WILLOW) chegou! Escute agora.',
+  image:
+    'https://djlife.nl/content/images/size/w960/2021/07/kofi-nuamah-barden-2Rtc0Cdhmc4-unsplash.jpg',
+};
