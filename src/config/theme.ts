@@ -21,6 +21,7 @@ export const Theme = {
     x1: 8,
     x2: 16,
     x3: 24,
+    x4: 32,
   },
   FONTS: {
     TEXT: 'Inter_600SemiBold',
